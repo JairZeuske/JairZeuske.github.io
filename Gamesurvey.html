@@ -4,6 +4,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="style.css"/>
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
 </head>
 
 <body background="Images/blueblackshards.jpg">
@@ -16,5 +34,59 @@
   </table>
   <p>&nbsp;</p>
 </div>
+<div align="left" class="texthome">Welcome to the survey! From here you can give suggestions as to which games I should add next, or general suggestions about the site overall.</div>
+<div align="center"></div>
+<p>&nbsp;</p>
+<div align="center">
+  <table width="25%" border="1" cellpadding="2" cellspacing="2" class="texthome">
+    <tr>
+      <td width="50%"><div align="center" class="texthome">Questions</div></td>
+      <td width="50%"><div align="center">Responses</div></td>
+    </tr>
+    <tr>
+      <td><div align="right" class="texthome">Name (Optional)</div></td>
+      <td><form id="form1" name="form1" method="post" action="">
+        <label for="Name"></label>
+        <input type="text" name="Name" id="Name" />
+      </form></td>
+    </tr>
+    <tr>
+      <td><div align="right">What Games Should I add?</div></td>
+      <td><form id="form2" name="form2" method="post" action="">
+        <label for="games"></label>
+        <input type="text" name="games" id="games" />
+      </form></td>
+    </tr>
+    <tr>
+      <td><div align="right">What links should I add?</div></td>
+      <td><form id="form3" name="form3" method="post" action="">
+        <label for="links"></label>
+        <input name="links" type="text" id="links" value="" />
+      </form></td>
+    </tr>
+    <tr>
+      <td><div align="right">General Suggestions</div></td>
+      <td><form id="form4" name="form4" method="post" action="">
+        <label for="suggestions"></label>
+        <input type="text" name="suggestions" id="suggestions" />
+      </form></td>
+    </tr>
+    <tr>
+      <td><div align="right">
+        <form id="form6" name="form6" method="post" action="">
+        </form>
+      </div></td>
+      <td><form id="form5" name="form5" method="post" action="">
+      </form></td>
+    </tr>
+    <tr>
+      <td><div align="right">
+        <input type="reset" name="Reset" id="Reset" value="Reset" />
+      </div></td>
+      <td><input name="submit" type="submit" id="submit" onclick="MM_validateForm('suggestions','','R');return document.MM_returnValue" value="Submit" /></td>
+    </tr>
+  </table>
+</div>
+<p>&nbsp;</p>
 </body>
 </html>

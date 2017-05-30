@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Super Survey</title>
+<link rel="stylesheet" href="style.css"/>
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
+</head>
+
+<body background="Images/blueblackshards.jpg">
+<div align="center" class="texthome">
+  <h1>Jair's Game Page</h1>
+  <table width="50%" border="1" cellspacing="2" cellpadding="2">
+    <tr>
+      <td><div align="center" class="texthome"><a href="index.html">Home</a> | <a href="portal.html">Portal</a> | <a href="gameindex.html">Games</a> | About the Author</div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+<div align="left" class="texthome">Welcome to the survey! From here you can give suggestions as to which games I should add next, or general suggestions about the site overall.</div>
+<div align="center"></div>
+<p>&nbsp;</p>
+<div align="center">
+   <form action="mailto:Jairrzeuske@gmail.com" method="post" enctype="text/plain" onsubmit="MM_validateForm('name','','R','email','','R','rating','','NinRange1:10');return document.MM_returnValue">
+    <table width="50%" border="1" class="texthome">
+      <tr>
+        <td><div align="right">Name</div></td>
+        <td><div align="left">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" />
+        </div></td>
+      </tr>
+      <tr>
+        <td><div align="right">Email</div></td>
+        <td><div align="left" onfocus="MM_validateForm('name','','R','email','','RisEmail');return document.MM_returnValue">
+          <label for="gamesuggestions"></label>
+          <label for="email"></label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <label for="gamesuggestions"></label></td>
+      </tr>
+      <tr>
+        <td><div align="right">What new games should I add?</div></td>
+        <td><input type="text" name="gamesuggestions" id="gamesuggestions" /></td>
+      </tr>
+      <tr>
+        <td><div align="right">What new links should I add?</div></td>
+        <td><div align="left">
+          <label for="security"></label>
+          <div align="left">
+            <label for="linksuggestions"></label>
+            <input type="text" name="linksuggestions" id="linksuggestions" />
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td><div align="right">general suggestions</div></td>
+        <td><div align="left">
+          <input type="text" name="generalsuggestions" id="generalsuggestions" />
+        </div></td>
+      </tr>
+      <tr>
+        <td><div align="right">How would you rate my site out of 10?</div></td>
+        <td><div align="left">
+          <label for="generalsuggestions"></label>
+          <label for="rating"></label>
+          <input type="text" name="rating" id="rating" />
+        </div></td>
+      </tr>
+      <tr>
+        <td><div align="right">
+          <input type="reset" name="reset" id="reset" value="Reset" />
+        </div></td>
+        <td><div align="left">
+          <input type="submit" name="Submit" id="submit" value="Submit" />
+        </div></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

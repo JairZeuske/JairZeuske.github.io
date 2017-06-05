@@ -4,9 +4,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Home Page of Destiny</title>
 <link rel="stylesheet" href="style.css"/>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	left:135px;
+	top:280px;
+	width:268px;
+	height:155px;
+	z-index:1;
+	visibility: hidden;
+}
+#apDiv2 {
+	position:absolute;
+	left:464px;
+	top:280px;
+	width:268px;
+	height:155px;
+	z-index:2;
+	visibility: hidden;
+}
+#apDiv3 {
+	position:absolute;
+	left:793px;
+	top:280px;
+	width:268px;
+	height:155px;
+	z-index:3;
+	visibility: hidden;
+}
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
 </head>
 
 <body style="background-position:center; color: #FFF; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;" background="Images/blackblue1.jpg">
+<div id="apDiv1">This portal site provides links to places like Youtube, Netflix, and Spotify all in one place for your conveniance!</div>
+<div id="apDiv2">This game site has unblocked flash games that can be played anywhere as long as you have access to this site!</div>
+<div id="apDiv3">This survey allows you to give me feedback on the website such as more portals I should add or what games I should add!</div>
 <div align="center">
   <h1 class="texthome"><span class="texthome">Welcome to the Wonderful Website of Jair Zeuske</span></h1>
 </div>
@@ -14,10 +55,10 @@
 <div align="center">
   <table width="50%" border="1" cellspacing="2" cellpadding="2">
     <tr>
-      <td><div align="center"><a href="portal.html">Portal</a> | About the Author | <a href="gameindex.html">Games</a> | <a href="Survey.html">Survey</a></div></td>
+      <td><div align="center"><a href="portal.html" onmouseover="MM_showHideLayers('apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide')">Portal</a>  | <a href="gameindex.html" onmouseover="MM_showHideLayers('apDiv2','','show')" onmouseout="MM_showHideLayers('apDiv2','','hide')">Games</a> | <a href="Survey.html" onmouseover="MM_showHideLayers('apDiv3','','show')" onmouseout="MM_showHideLayers('apDiv3','','hide')">Survey</a></div></td>
     </tr>
   </table>
 </div>
-<p align="left"><span class="texthome"><span class="texthome">Welcome to the sole creation of my ultimate coding prowess. Through the power of HTML I have created the best website on the internet.	</span> </span>Within this site there will be a portal site to everywhere on the internet worth going (currently incomplete), A site filled with unblocked flash games (almost complete), an about the author section (incomplete), and a Survey where you can give feedback (mostly complete, with a few bugs).</p>
+<p align="left">Welcome to my Website! Within this website you will find a portal site to places all over the internet, a game site filled with fun games, and a survey site. Hover over the links to reveal hidden knowledge about their respective destinations.</p>
 </body>
 </html>
